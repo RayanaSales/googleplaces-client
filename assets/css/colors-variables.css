@@ -1,0 +1,73 @@
+/* 
+  Rules
+    types      - color, font, size
+    context    - error, succes, warning, active, desactive, disabled, primary...
+    component  - input, button, tag
+    specific   - attributes, placeholder
+    status     - active, focus, hover 
+    variables  - type-context-component-specific-status
+    */
+/**
+ * @tokens Colors
+ * @presenter Color
+ */
+
+/* type-context-component-specific-status */
+/*  color -  dark  -  button   -  outline -  hover  */
+:root {
+  /* Colors */
+
+  /* texts */
+  --color-text-hover-white: white;
+  --color-default-orange: #ff9c31;
+  --color-header-title: #4f4f4f;
+
+  /* notification */
+  --color-notification-sucess: #89cf31;
+  --color-notification-error: #ff003e;
+
+  /* button */
+  --color-white-ice: #ffffff;
+  --color-light-grey: #f3f3f3;
+  --color-primary-gray: #8c8c8c;
+  --color-secondary-gray: #484848;
+  --color-third-gray: #3b3b3b;
+
+  /* solicitations */
+  --color-solicitation-status-new: #000000;
+  --color-solicitation-status-sent: #3CD6F2;
+  --color-solicitation-status-canceled: #939393;
+  --color-solicitation-status-pending: #c21712;
+  --color-solicitation-status-processing: #ffc300;
+  --color-solicitation-status-completed: #8dc63f;
+  --color-solicitation-filter-orange: #ffc301;
+
+  /* empty contents */
+  --color-empty-title: #828282;
+  --color-empty-sub-title: #bdbdbd;
+
+  /* users */
+  --color-users-title-bar: #e0e0e0;
+
+  /* slider */
+  --color-slider-brown: #c21712;
+
+  /* backgrounds */
+  --color-red-linear: linear-gradient(
+    91.68deg,
+    #f55046 33.02%,
+    #ff6b00 100.48%
+  );
+  --color-yellow-linear: linear-gradient(
+    347.12deg,
+    #ffb800 12.26%,
+    #ffd600 83.17%
+  );
+  --color-orange-linear: linear-gradient(
+    90deg,
+    #ff9330 22.98%,
+    #ffac30 104.04%
+  );
+  --color-page: f5f5f5;
+  --color-most-black: #000000;
+}

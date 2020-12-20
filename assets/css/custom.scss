@@ -1,0 +1,315 @@
+$primary: #ffc301;
+$secondary: #e5e0cb;
+$dark-blue: #225183;
+$accent: #dd1914;
+
+$error: #c21712;
+$success: #47bc89;
+$warning: #ffbc4f;
+
+$cold: #616e88;
+
+$dark: #3b3b3b;
+$light: #ffffff;
+
+$primary-gradient: linear-gradient(168.48deg, #66eab6 0%, #46d2bd 61.79%);
+
+$page-bg-color: #ffffff;
+
+$full: calc(100% - 90px);
+
+$toolbar-height: 164px;
+$page-full-height: calc(100vh - #{$toolbar-height});
+
+@import '~@/assets/css/colors-variables.css';
+
+@font-face {
+  font-family: DIN;
+  src: url('~@/assets/fonts/Din_Alternate.otf');
+}
+
+@font-face {
+  font-family: DINBold;
+  src: url('~@/assets/fonts/Din_Alternate_Bold.otf');
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("~@/assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("~@/assets/fonts/Roboto-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("~@/assets/fonts/Roboto-Medium.ttf");
+}
+$fontFamily: DIN, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, sans-serif;
+
+html {
+  font-family: $fontFamily;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $page-bg-color;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:focus {
+  outline: none !important;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+/* FLEX BOX HELPERS */
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.jc {
+  justify-content: center;
+}
+
+.js {
+  justify-content: flex-start;
+}
+
+.je {
+  justify-content: flex-end;
+}
+
+.jb {
+  justify-content: space-between;
+}
+
+.ja {
+  justify-content: space-around;
+}
+
+.jev {
+  justify-content: space-evenly;
+}
+
+.ac {
+  align-items: center;
+}
+
+.as {
+  align-items: flex-start;
+}
+
+.ae {
+  align-items: flex-end;
+}
+
+.ab {
+  align-items: baseline;
+}
+
+.as-center {
+  align-self: center;
+}
+
+.as-start {
+  align-self: flex-start;
+}
+
+.as-end {
+  align-self: flex-end;
+}
+
+.js-center {
+  justify-self: center;
+}
+
+.js-start {
+  justify-self: flex-start;
+}
+
+.js-end {
+  justify-self: flex-end;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.fpw {
+  width: 100%;
+}
+
+.fvw {
+  width: 100vw;
+}
+
+.fph {
+  height: 100%;
+}
+
+.fvh {
+  height: 100vh;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* POSITION HELPERS */
+
+$gap: 4px;
+
+$media-query-phone: 'screen and (max-width : 769px)';
+$media-query-desktop: 'screen and (min-width: 1024px)';
+$break-desktop-widescreen: 'screen and (min-width: 1216px)';
+$break-desktop-fullhd: 'screen and (min-width: 1408px)';
+
+@for $index from 1 to 16 {
+  .ma-#{$index} {
+    margin-top: $gap * $index;
+    margin-bottom: $gap * $index;
+    margin-left: $gap * $index;
+    margin-right: $gap * $index;
+  }
+
+  .mx-#{$index} {
+    margin-left: $gap * $index;
+    margin-right: $gap * $index;
+  }
+
+  .my-#{$index} {
+    margin-top: $gap * $index;
+    margin-bottom: $gap * $index;
+  }
+
+  .mt-#{$index} {
+    margin-top: $gap * $index;
+  }
+
+  .mb-#{$index} {
+    margin-bottom: $gap * $index;
+  }
+
+  .ml-#{$index} {
+    margin-left: $gap * $index;
+  }
+
+  .mr-#{$index} {
+    margin-right: $gap * $index;
+  }
+
+  .pa-#{$index} {
+    padding-top: $gap * $index;
+    padding-bottom: $gap * $index;
+    padding-left: $gap * $index;
+    padding-right: $gap * $index;
+  }
+  .px-#{$index} {
+    padding-left: $gap * $index;
+    padding-right: $gap * $index;
+  }
+
+  .py-#{$index} {
+    padding-top: $gap * $index;
+    padding-bottom: $gap * $index;
+  }
+
+  .pt-#{$index} {
+    padding-top: $gap * $index;
+  }
+
+  .pb-#{$index} {
+    padding-bottom: $gap * $index;
+  }
+
+  .pl-#{$index} {
+    padding-left: $gap * $index;
+  }
+
+  .pr-#{$index} {
+    padding-right: $gap * $index;
+  }
+}
+
+/* TRANSITIONS */
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 200ms;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+/* SLIDE TRANSITION */
+
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(30px, 0);
+}
+
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(-30px, 0);
+}
+
+.slide-left-leave-active,
+.slide-right-leave-active,
+.slide-right-enter-active,
+.slide-left-enter-active {
+  transition: 300ms ease-in-out;
+}
+
+.slide-left-leave,
+.slide-left-enter-to,
+.slide-right-leave,
+.slide-right-enter-to {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-left-enter,
+.slide-right-leave-to {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+.slide-left-leave-to,
+.slide-right-enter {
+  transform: translateX(-30px);
+  opacity: 0;
+}
