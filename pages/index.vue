@@ -1,7 +1,11 @@
 <template>
-  <div>TESTE PAGINA INDEX</div>
+  <div></div>
 </template>
 
 <script>
-export default {};
+export default {
+  middleware({ redirect }) {
+    return redirect("/map/preview");
+  }
+};
 </script>

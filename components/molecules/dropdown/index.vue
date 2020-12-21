@@ -64,32 +64,18 @@ export default {
     items: {
       type: Array,
       default: () => [
-        // {
-        //   id: 0,
-        //   label: 'Usuários',
-        //   icon: 'user',
-        //   router: '/users',
-        //   subItems: [],
-        // },
+        {
+          id: 0,
+          label: "Mapa",
+          icon: "user",
+          router: "/map/preview",
+          subItems: []
+        },
         {
           id: 1,
-          label: "Solicitações",
+          label: "Lugares",
           icon: "requests",
-          router: "/solicitations",
-          subItems: []
-        },
-        {
-          id: 2,
-          label: "Adicionar planilhas",
-          icon: "upload",
-          router: "/spreadsheet",
-          subItems: []
-        },
-        {
-          id: 3,
-          label: "Ranking",
-          icon: "ranking",
-          router: "/ranking",
+          router: "/map/places",
           subItems: []
         }
       ]
@@ -176,8 +162,7 @@ export default {
         > .title {
           > span {
             @include font-config("text-button");
-            // color: color(header-title);
-            color: black;
+            color: color(header-title);
           }
         }
       }
@@ -215,8 +200,7 @@ export default {
     border-radius: 4px;
 
     span {
-      // color: color(text-hover-white) !important;
-      color: white !important;
+      color: color(text-hover-white) !important;
     }
     .icon {
       img {
@@ -250,8 +234,7 @@ export default {
     flex-direction: row;
 
     span {
-      // color: color(text-hover-white);
-      color: white;
+      color: color(text-hover-white);
     }
     > .icon {
       margin-left: 10px;
@@ -266,8 +249,7 @@ export default {
 
     > span {
       @include font-config("text-button");
-      // color: color(secondary-gray);
-      color: gray;
+      color: color(secondary-gray);
     }
   }
 }

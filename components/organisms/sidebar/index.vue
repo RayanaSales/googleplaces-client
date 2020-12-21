@@ -1,12 +1,6 @@
 <template>
   <div class="sidebar-content">
-    <div class="logo-content">
-      <img
-        class="admin-logo"
-        src="@/assets/images/LogoAdmin.png"
-        alt="Admin logo"
-      />
-    </div>
+    <div class="logo-content"></div>
     <Dropdown />
   </div>
 </template>
@@ -21,10 +15,13 @@ export default {
 
 <style lang="scss">
 .sidebar-content {
+  @include media("<tablet-lg") {
+    display: none;
+  }
+
   height: 100%;
   width: 320px;
-  // background: color(yellow-linear);
-  background: yellow;
+  background: color(yellow-linear);
 
   > .logo-content {
     margin-top: 40px;

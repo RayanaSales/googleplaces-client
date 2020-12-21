@@ -29,18 +29,12 @@ export default {
     "$route.path": {
       immediate: true,
       handler(current) {
-        if (current.includes("/users")) {
-          this.pageTitle = "Usuários";
-        } else if (current.includes("/solicitations")) {
-          this.pageTitle = "Solicitações de troca";
-        } else if (current.includes("/solicitation/")) {
-          this.pageTitle = "Detalhes referentes a solicitação";
-        } else if (current.includes("/spreadsheet")) {
-          this.pageTitle = "Adicionar planilhas";
-        } else if (current.includes("/program")) {
-          this.pageTitle = "Programa";
-        } else if (current.includes("/ranking")) {
-          this.pageTitle = "Ranking";
+        if (current.includes("/map/places")) {
+          this.pageTitle = "Lugares favoritos";
+        } else if (current.includes("/map/preview")) {
+          this.pageTitle = "Mapa";
+        } else {
+          this.pageTitle = "Index";
         }
       }
     }
@@ -50,8 +44,11 @@ export default {
 
 <style lang="scss">
 .header-wrapper {
-  // background-color: color(light-grey);
-  background-color: gray;
+  @include media("<tablet-lg") {
+    display: none;
+  }
+
+  background-color: color(light-grey);
   height: 100px;
   width: 100%;
 
@@ -66,8 +63,7 @@ export default {
 
     > .title {
       @include font-config("header-title");
-      // color: color(header-title);
-      color: #000;
+      color: color(header-title);
     }
 
     > .btns {
