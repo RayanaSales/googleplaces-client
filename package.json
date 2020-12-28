@@ -9,7 +9,7 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "npm run lint:js",
-    "heroku-postbuild": "node server.js"
+    "heroku-postbuild": "npm run build"
   },
   "engines": {
     "node": "14.14.0",
