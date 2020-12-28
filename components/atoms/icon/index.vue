@@ -16,19 +16,19 @@ export default {
   props: {
     testId: {
       type: String,
-      default: () => ""
+      default: () => '',
     },
     icon: {
       type: String,
-      default: () => "",
-      required: true
+      default: () => '',
+      required: true,
     },
     alt: {
       type: String,
-      default: () => ""
-    }
-  }
-};
+      default: () => '',
+    },
+  },
+}
 </script>
 
 <style scoped>

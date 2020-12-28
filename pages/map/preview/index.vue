@@ -3,15 +3,15 @@
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style lang="scss">
 .map-preview {
-  @include media("<tablet-lg") {
+  @include media('<tablet-lg') {
     background: red;
   }
-  @include media(">=tablet-lg") {
+  @include media('>=tablet-lg') {
     background: green;
   }
 }

@@ -13,16 +13,16 @@
 <script>
 export default {
   components: {
-    Sidebar: () => import("../components/organisms/sidebar"),
-    Header: () => import("../components/molecules/header")
-  }
-};
+    Sidebar: () => import('../components/organisms/sidebar'),
+    Header: () => import('../components/molecules/header'),
+  },
+}
 </script>
 
 <style lang="scss">
 html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

@@ -4,31 +4,30 @@ export default {
 
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
-  
+
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: "googleplaces-client",
+    title: 'googleplaces-client',
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" }
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    { src: "assets/css/custom.scss" },
-    { src: "assets/css/mixins.scss" },
-    ,
-    { src: "assets/css/media-queries.scss" }
+    { src: 'assets/css/custom.scss' },
+    { src: 'assets/css/mixins.scss' },
+    { src: 'assets/css/media-queries.scss' },
   ],
   styleResources: {
     scss: [
-      "assets/css/custom.scss",
-      "assets/css/mixins.scss",
-      "assets/css/media-queries.scss"
-    ]
+      'assets/css/custom.scss',
+      'assets/css/mixins.scss',
+      'assets/css/media-queries.scss',
+    ],
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -41,8 +40,8 @@ export default {
   buildModules: [],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ["@nuxtjs/style-resources"],
+  modules: ['@nuxtjs/style-resources'],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {}
-};
+  build: {},
+}

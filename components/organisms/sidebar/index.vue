@@ -8,14 +8,14 @@
 <script>
 export default {
   components: {
-    Dropdown: () => import("../../molecules/dropdown")
-  }
-};
+    Dropdown: () => import('../../molecules/dropdown'),
+  },
+}
 </script>
 
 <style lang="scss">
 .sidebar-content {
-  @include media("<tablet-lg") {
+  @include media('<tablet-lg') {
     display: none;
   }
 

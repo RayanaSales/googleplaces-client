@@ -5,7 +5,7 @@
 <script>
 export default {
   middleware({ redirect }) {
-    return redirect("/map/preview");
-  }
-};
+    return redirect('/map/preview')
+  },
+}
 </script>

@@ -50,59 +50,59 @@
 <script>
 export default {
   components: {
-    Icon: () => import("../../atoms/icon")
+    Icon: () => import('../../atoms/icon'),
   },
   props: {
     parentComponent: {
       type: String,
-      default: "menu"
+      default: 'menu',
     },
     enableAutomaticllyCloseDropdown: {
       type: Boolean,
-      default: false
+      default: false,
     },
     items: {
       type: Array,
       default: () => [
         {
           id: 0,
-          label: "Mapa",
-          icon: "user",
-          router: "/map/preview",
-          subItems: []
+          label: 'Mapa',
+          icon: 'user',
+          router: '/map/preview',
+          subItems: [],
         },
         {
           id: 1,
-          label: "Lugares",
-          icon: "requests",
-          router: "/map/places",
-          subItems: []
-        }
-      ]
-    }
+          label: 'Lugares',
+          icon: 'requests',
+          router: '/map/places',
+          subItems: [],
+        },
+      ],
+    },
   },
   data: () => ({
-    activeItem: "",
-    activeSubitem: "",
-    dropdownOpened: false
+    activeItem: '',
+    activeSubitem: '',
+    dropdownOpened: false,
   }),
   mounted() {
-    this.activeItem = this.$route.path;
+    this.activeItem = this.$route.path
   },
   methods: {
     checkClasses(item) {
       const activeClass =
-        this._props.parentComponent === "menu"
-          ? "active-item"
-          : "active-item-sol";
+        this._props.parentComponent === 'menu'
+          ? 'active-item'
+          : 'active-item-sol'
 
       return item.router === this.activeItem && this.dropdownOpened
-        ? "label " + activeClass
-        : "label";
+        ? 'label ' + activeClass
+        : 'label'
     },
     automaticllyCloseDropdown(event) {
       if (this.dropdownOpened && this.enableAutomaticllyCloseDropdown) {
-        this.dropdownOpened = false;
+        this.dropdownOpened = false
       }
     },
     handleItemClick(option) {
@@ -110,27 +110,27 @@ export default {
       if (!this.$route.path.includes(option.router)) {
         // se o dropdown estiver aberto, feche ele
         if (this.dropdownOpened) {
-          this.openDropdown(option);
+          this.openDropdown(option)
         }
       }
-      this.activeItem = option.router;
-      this.$router.push(option.router);
+      this.activeItem = option.router
+      this.$router.push(option.router)
     },
     openDropdown(option) {
       // if closing, clear activeSubitem
       if (this.dropdownOpened) {
-        this.activeSubitem = "";
+        this.activeSubitem = ''
       }
-      this.dropdownOpened = !this.dropdownOpened;
-      this.activeItem = option.router;
+      this.dropdownOpened = !this.dropdownOpened
+      this.activeItem = option.router
     },
     handleSubitemClick(subOption) {
-      this.$emit("emitchoice", subOption);
-      this.activeSubitem = subOption.router;
-      this.$router.push(subOption.router);
-    }
-  }
-};
+      this.$emit('emitchoice', subOption)
+      this.activeSubitem = subOption.router
+      this.$router.push(subOption.router)
+    },
+  },
+}
 </script>
 
 <style lang="scss">
@@ -161,7 +161,7 @@ export default {
 
         > .title {
           > span {
-            @include font-config("text-button");
+            @include font-config('text-button');
             color: color(header-title);
           }
         }
@@ -248,7 +248,7 @@ export default {
     margin-left: 14px;
 
     > span {
-      @include font-config("text-button");
+      @include font-config('text-button');
       color: color(secondary-gray);
     }
   }

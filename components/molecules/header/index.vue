@@ -23,28 +23,28 @@
 <script>
 export default {
   data: () => ({
-    pageTitle: ""
+    pageTitle: '',
   }),
   watch: {
-    "$route.path": {
+    '$route.path': {
       immediate: true,
       handler(current) {
-        if (current.includes("/map/places")) {
-          this.pageTitle = "Lugares favoritos";
-        } else if (current.includes("/map/preview")) {
-          this.pageTitle = "Mapa";
+        if (current.includes('/map/places')) {
+          this.pageTitle = 'Lugares favoritos'
+        } else if (current.includes('/map/preview')) {
+          this.pageTitle = 'Mapa'
         } else {
-          this.pageTitle = "Index";
+          this.pageTitle = 'Index'
         }
-      }
-    }
-  }
-};
+      },
+    },
+  },
+}
 </script>
 
 <style lang="scss">
 .header-wrapper {
-  @include media("<tablet-lg") {
+  @include media('<tablet-lg') {
     display: none;
   }
 
@@ -62,7 +62,7 @@ export default {
     align-items: center;
 
     > .title {
-      @include font-config("header-title");
+      @include font-config('header-title');
       color: color(header-title);
     }
 
