@@ -1,5 +1,5 @@
 <template>
-  <div>Lugares favoritados 3</div>
+  <div>Lugares favoritados - auto deploy master</div>
 </template>
 
 <script>
