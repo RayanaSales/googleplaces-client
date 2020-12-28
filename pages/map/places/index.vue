@@ -1,5 +1,5 @@
 <template>
-  <div>Lugares favoritados</div>
+  <div>Lugares favoritados 2</div>
 </template>
 
 <script>
