@@ -60,7 +60,7 @@ export default {
     top: 10px;
     z-index: 1;
     background-color: white;
-    width: 83%;
+    width: 70%;
     height: 40px;
   }
 
@@ -81,7 +81,7 @@ export default {
     > .data {
       @include media('<=tablet-lg') {
         height: 100%;
-        width: 70%;
+        width: 60%;
         padding-left: 10px;
       }
       @include font-config('header-title');
@@ -90,7 +90,7 @@ export default {
 
     > .btns {
       @include media('<=tablet-lg') {
-        width: 30%;
+        width: 40%;
         height: 25px;
       }
       display: flex;
@@ -101,11 +101,8 @@ export default {
         display: flex;
         align-items: center;
 
-        > .gray {
-          color: red;
-          svg {
-            fill: red;
-          }
+        > img {
+          width: 25px;
         }
       }
       > .search {

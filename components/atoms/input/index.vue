@@ -24,7 +24,7 @@ export default {
 <style>
 input {
   border: none;
-  width: 250px;
+  width: 170px;
   height: 100%;
 }
 input::placeholder {
