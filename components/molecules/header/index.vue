@@ -1,28 +1,33 @@
 <template>
   <div class="header-wrapper">
-    <div class="content">
-      <div class="title">
-        <span>{{ pageTitle }}</span>
+    <div class="header-content">
+      <div class="data">
+        <Input type="text" name="lname" placeholder="CEP, Cidade ou Bairro" />
       </div>
       <div class="btns">
-        <!-- <a title="Notificações" class="alert">
-          <img src="@/assets/icons/alert.svg" alt="notificações" />
-        </a> -->
-        <a
-          title="Sair"
-          class="logout"
-          @click="() => $store.dispatch('session/CLEAR_SESSION')"
-        >
-          <img src="@/assets/icons/logout.svg" alt="Sair" />
-        </a>
+        <div class="ic search">
+          <Icon icon="search" class="gray" />
+        </div>
+        <diV class="ic heart">
+          <Icon icon="heart" />
+        </diV>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Input from '@/components/atoms/input'
+import Icon from '@/components/atoms/icon'
+
 export default {
+  name: 'Header',
+  components: {
+    Input,
+    Icon,
+  },
   data: () => ({
+    extenseLocale: '',
     pageTitle: '',
   }),
   watch: {
@@ -44,34 +49,71 @@ export default {
 
 <style lang="scss">
 .header-wrapper {
-  @include media('<tablet-lg') {
-    display: none;
+  @include media('>=tablet-lg') {
+    background-color: color(light-grey);
+    height: 100px;
+    width: 100%;
+  }
+  @include media('<=tablet-lg') {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 1;
+    background-color: white;
+    width: 83%;
+    height: 40px;
   }
 
-  background-color: color(light-grey);
-  height: 100px;
-  width: 100%;
-
-  .content {
-    width: 100%;
-    height: 100%;
-    padding: 30px;
+  .header-content {
+    @include media('>=tablet-lg') {
+      width: 100%;
+      height: 100%;
+      padding: 30px;
+    }
+    @include media('<=tablet-lg') {
+      height: 100%;
+    }
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    > .title {
+    > .data {
+      @include media('<=tablet-lg') {
+        height: 100%;
+        width: 70%;
+        padding-left: 10px;
+      }
       @include font-config('header-title');
       color: color(header-title);
     }
 
     > .btns {
-      > a {
-        cursor: pointer;
+      @include media('<=tablet-lg') {
+        width: 30%;
+        height: 25px;
       }
-      > .alert {
-        margin-right: 32px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      > .ic {
+        display: flex;
+        align-items: center;
+
+        > .gray {
+          color: red;
+          svg {
+            fill: red;
+          }
+        }
+      }
+      > .search {
+        width: 40px;
+        border-right: 2px solid color(users-title-bar);
+      }
+      > .heart {
+        width: 25px;
       }
     }
   }
